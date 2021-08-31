@@ -1,0 +1,194 @@
+:root {
+    --quote-img: hsl(263, 57%, 58%);
+    --primary-moderate_violet: hsl(263, 55%, 52%);
+    --primary-dark_grayish_blue: hsl(217, 19%, 35%);
+    --primary-dark-blackish-blue: hsl(219, 29%, 14%);
+    --primary-white: hsl(0, 0%, 100%);
+    --neutral-light-gray: hsl(0, 0%, 73%);
+    --neutral-light-gray_2: hsl(0, 0%, 66%);
+    --neutral-light-grayish-blue: hsl(210, 46%, 95%);
+    --weight-500: 500;
+    --weight-600: 600; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body {
+    font-size: 1.3rem;
+    background-color: var(--neutral-light-grayish-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.container {
+    width: 85%;
+    margin-top: 3rem;
+}
+
+.container .card {
+    margin-bottom: 2.2rem;
+    border-radius: .8rem;
+    padding: 3.2rem;
+}
+
+/* ESTILOS DE LA IMAGEN DEL QUOTE */
+.container .card-1 {
+    position: relative;
+    overflow: hidden;
+}
+.container .card-1 .img-quotation {
+    position: absolute;
+    top: 0;
+    right: 8%;
+    z-index: 10;
+}
+
+.container .card-1 .profile,
+.container .card-1 .paragraph {
+    position: relative;
+    z-index: 20;
+}
+
+/* ESTILOS DEL PERFIL */
+.container .card .profile {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.container .card .profile > img {
+    border-radius: 50%;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 1.5rem;
+}
+.container .card-1 .profile > div p:first-child,
+.container .card-2 .profile > div p:first-child,
+.container .card-4 .profile > div p:first-child {
+    color: var(--primary-white);
+    font-weight: var(--weight-500);
+}
+.container .card-3 .profile > div p:first-child,
+.container .card-5 .profile > div p:first-child {
+    color: var(--primary-dark_grayish_blue);
+    font-weight: var(--weight-500);
+}
+.container .card-1 .profile > div p:last-child,
+.container .card-2 .profile > div p:last-child,
+.container .card-3 .profile > div p:last-child,
+.container .card-4 .profile > div p:last-child,
+.container .card-5 .profile > div p:last-child {
+    color: var(--neutral-light-gray_2);
+    opacity: .5;
+    font-weight: var(--weight-500);
+    font-size: 1.2rem;
+}
+.container .card-3 .profile > div p:last-child,
+.container .card-5 .profile > div p:last-child {
+    opacity: .7;
+}
+
+/* ESTILOS DE LOS PARRAFOS */
+.container .card .paragraph > p:first-child {
+    margin: 2rem 0;
+}
+.container .card-1 .paragraph > p:first-child,
+.container .card-2 .paragraph > p:first-child,
+.container .card-4 .paragraph > p:first-child {
+    color: var(--primary-white);
+    font-weight: var(--weight-600);
+    font-size: 1.8rem;
+}
+.container .card-3 .paragraph > p:first-child,
+.container .card-5 .paragraph > p:first-child {
+    color: var(--primary-dark_grayish_blue);
+    font-weight: var(--weight-600);
+    font-size: 1.8rem;
+}
+.container .card-1 .paragraph > p:last-child,
+.container .card-2 .paragraph > p:last-child,
+.container .card-3 .paragraph > p:last-child,
+.container .card-4 .paragraph > p:last-child,
+.container .card-5 .paragraph > p:last-child {
+    color: var(--neutral-light-gray_2);
+    opacity: .7;
+    font-weight: var(--weight-500);
+}
+.container .card-3 .paragraph > p:last-child,
+.container .card-5 .paragraph > p:last-child {
+    opacity: 1;
+}
+/* FIN DE ESTILOS DE LOS PARRAFOS */
+
+.container .card-1 {
+    background-color: var(--primary-moderate_violet);
+}
+.container .card-2 {
+    background-color: var(--primary-dark_grayish_blue);
+}
+.container .card-3 {
+    background-color: var(--primary-white);
+    
+}
+.container .card-4 {
+    background-color: var(--primary-dark-blackish-blue);
+    
+}
+.container .card-5 {
+    background-color: var(--primary-white);
+    
+}
+
+.attribution {
+    font-size: 1.2rem;
+    font-weight: var(--weight-600);
+    margin: 0rem 1.2rem .5rem;
+    text-align: center;
+}
+
+@media  screen and (min-width: 1000px) {
+    body {
+        height: 100vh;
+    }
+    .container {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .container .card {
+        margin-bottom: 0;
+    }
+    .card-1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .card-2 {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    .card-3 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .card-4 {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    .card-5 {
+        grid-column: 4/5;
+        grid-row: 1/-1;
+    }
+    .attribution {
+        margin-top: 1.2rem;
+    }
+}
