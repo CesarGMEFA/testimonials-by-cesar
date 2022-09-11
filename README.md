@@ -28,5 +28,4 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 ## Author
 
 - Frontend Mentor - [@CesarGMEFA](https://www.frontendmentor.io/profile/CesarGMEFA)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
